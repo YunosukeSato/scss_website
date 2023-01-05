@@ -1,0 +1,55 @@
+@use "../global/base" as base;
+// @use "../global/layout" as layout;
+
+.book {
+  text-align: center;
+  background: url(https://source.unsplash.com/ThtzElwvwyM);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 100px 100px 100px;
+
+  h2 {
+    @include base.textStyle(h2, base.$color-main);
+  }
+
+  h3 {
+    @include base.textStyle(h3, _);
+    padding: 30px 0;
+  }
+
+  img {
+    width: 90%;
+  }
+
+  i {
+    color: base.$color-main;
+    font-size: 3rem;
+    display: inline-block;
+    border: 1px solid base.$color-main;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  span {
+    display: block;
+    margin: 10px 0;
+  }
+
+  a {
+    @include base.linkStyle(base.$color-main);
+    font-family: base.$font-playFair;
+    font-size: 2.5rem;
+    display: block;
+  }
+
+  section {
+    float: left;
+    width: 50%;
+    margin: 20px 0;
+
+    .time {
+      font-family: base.$font-playFair;
+      font-size: 1.7rem;
+    }
+  }
+}
